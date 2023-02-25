@@ -13,9 +13,7 @@ export default class PhonicSoundButton extends React.Component {
   playSound = async soundChunk => {
     console.log(soundChunk);
     var soundLink =
-      'https://whitehatjrcontent.s3.ap-south-1.amazonaws.com/phones/' +
-      soundChunk +
-      '.mp3';
+      'https://cdn.pixabay.com/download/audio/2021/08/04/audio_69b90804eb.mp3?filename=monkey-scream-6407.mp3';
     await Audio.Sound.createAsync(
       {
         uri: soundLink,

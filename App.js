@@ -8,7 +8,6 @@ import {
   Image,
   Alert
 } from 'react-native';
-import { Header } from 'react-native-elements';
 import db from './localdb';
 import PhonicSoundButton from './components/PhonicSoundButton';
 
@@ -24,13 +23,6 @@ export default class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Header
-          backgroundColor={'#9c8210'}
-          centerComponent={{
-            text: 'Monkey Chunky',
-            style: { color: '#fff', fontSize: 20 },
-          }}
-        />
 
         <Image
           style={styles.imageIcon}
@@ -55,7 +47,7 @@ export default class App extends React.Component {
             this.setState({ chunks: db[word].chunks }),
             this.setState({ phonicSounds: db[word].phones })
             ):
-            Alert.alert("The word does not exist in our database");
+            Alert.alert("monkey");
           }}>
           <Text style={styles.buttonText}>GO</Text>
         </TouchableOpacity>
